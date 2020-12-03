@@ -8,28 +8,22 @@
     <title>Cube map</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <style>
     #panorama {
         width: 600px;
         height: 400px;
     }
+    #map {
+      width: 600px;
+      height: 500px;
+    }
     </style>
-    <!--<script defer src="src/index.js" charset="utf-8"></script>-->
+  <script defer src="index.js" charset="utf-8"></script>
   </head>
   <body>
     <div id="panorama"></div>
-    <script>
-    pannellum.viewer('panorama', {
-        "type": "cubemap",
-        "cubeMap": [
-            "./images/capital_chill/panorama_0.png",
-            "./images/capital_chill/panorama_1.png",
-            "./images/capital_chill/panorama_2.png",
-            "./images/capital_chill/panorama_3.png",
-            "./images/capital_chill/panorama_4.png",
-            "./images/capital_chill/panorama_5.png"
-        ]
-    });
-    </script>
+    <div id="map"></div>
   </body>
 </html>
