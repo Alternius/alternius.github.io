@@ -3,7 +3,7 @@ const mapEl = document.getElementById('map');
 
 const minX = 100;
 const minY = 258;
-const maxX = 32250;
+const maxX = 27360;
 const maxY = 23000;
 const offsetY = 1200.636222910216;
 
@@ -39,15 +39,15 @@ function initMap() {
 
   map.on('click', function(e) {
     marker = new L.marker(e.latlng).addTo(map);
-    let x = e.latlng.lng;
-    let y = maxY - e.latlng.lat - offsetY;
+    let x = e.latlng.lng * 2500;
+    let y = (8 - e.latlng.lat) * 2500;
     alert(x + " | " + y);
   });
   map.on('drag', function() {
       map.panInsideBounds(bounds, { animate: true });
   });
-  var bounds = [[minY, minX], [maxY, maxX]];
-  var image = L.imageOverlay('images/i3JVqbS.png', bounds).addTo(map);
+  var bounds = [[0, 0], [8, 11]];
+  var image = L.imageOverlay('images/map_new.png', bounds).addTo(map);
   map.fitBounds(bounds);
 }
 
