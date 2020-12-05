@@ -37,6 +37,12 @@
       margin-right: auto;
       display:block;
     }
+    .guess {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 10px 10px;
+    }
   </style>
   <script defer src="index.js" charset="utf-8"></script>
   </head>
@@ -46,5 +52,7 @@
       <img src="images/header.png">
     </div>
     <div id="map"></div>
+    <button class="button guess" onclick = "guess()">Guess</button>
+    <p>Credit to caljitsu for the server map</p>
   </body>
 </html>
